@@ -2,14 +2,65 @@ import "./App.css";
 import LoginButton from "./components/loginButton";
 import LogoutButton from "./components/logoutButton";
 import UserProfile from "./components/userProfile";
+import Header from "./components/header";
+import Footer from "./components/footer";
+import { useState } from "react";
 
 function App() {
+  const [data, setData] = useState("");
+  const [postData, setPostData] = useState([]);
+
+  const handleChange = (e) => {
+    setData(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setData("");
+    // take the current elements in postData copy with ... and append with data
+    setPostData((prevData) => [...prevData, data]);
+  };
+
   return (
     <div className="App">
-      <LoginButton />
-      <LogoutButton />
-      <p>User Information!</p>
-      <UserProfile />
+      <Header />
+      <div className="Content">
+        <div className="left-bar">
+          <h1>Information</h1>
+          <LoginButton />
+          <LogoutButton />
+          <p>User Information!</p>
+          <UserProfile />
+        </div>
+
+        <div className="center-content">
+          <form onSubmit={handleSubmit}>
+            <input
+              onChange={(e) => handleChange(e)}
+              value={data}
+              placeholder="Create A Post!"
+            />
+            <button type="submit">Post</button>
+          </form>
+          {postData.map((d, i) => {
+            return (
+              <div className="center-card-content" key={i}>
+                <div className="card-header">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2017/02/07/16/47/kingfisher-2046453_1280.jpg"
+                    alt="pic"
+                  />
+                  <span> UserName</span>
+                </div>
+                <div className="card-body">{d}</div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="right-bar"></div>
+      </div>
+      <Footer />
     </div>
   );
 }

@@ -2,37 +2,60 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Content {
+  display: flex;
+
+  border: 3px solid red;
+  min-height: 80vh;
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left-bar {
+  border: 3px solid black;
+  width: 30vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.center-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* justify-content: center; */
+  border: 3px solid black;
+  width: 40vw;
 }
 
-.App-link {
-  color: #61dafb;
+
+.center-card-content {
+  border: 3px solid black;
+  width: 35vw;
+  height: 20vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.center-card-content img {
+  width: 40px;
+  height: 40px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: 3px solid black;
+  height: 30%;
+}
+
+.card-header img,
+span {
+  padding-left: 2%;
+}
+
+.card-body {
+  border: 3px solid black;
+  height: 60%;
+  overflow-wrap: break-word;
+}
+
+.right-bar {
+  border: 3px solid black;
+  width: 30vw;
 }
