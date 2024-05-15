@@ -14,7 +14,7 @@ function App() {
   const handleChange = (e) => {
     setData(e.target.value);
     //Axios call to send data to backend
-    let x = new Date();
+    //let x = new Date();
   };
 
   const handleSubmit = (e) => {
@@ -38,14 +38,10 @@ function App() {
 
         <div className="center-content">
           <form onSubmit={handleSubmit}>
-          <Resizable defaultSize={{ width: 300, height: 200 }} minConstraints={[100, 100]} maxConstraints={[500, 500]} >
-            <input
-              style={{ width: "100%", height: "100px" }}
+          <Resizable defaultSize={{ width: 300, height: 200 }} minConstraints={[100, 100]} maxConstraints={[500, 500]}
               onChange={(e) => handleChange(e)}
               value={data}
-              placeholder="Create A Post!"
-            />
-            </Resizable>
+              placeholder="Create A Post!" />
             <button type="submit">Post</button>
           </form>
           {postData.map((d, i) => {
