@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 function UserProfile() {
   const { user, isAuthenticated, isLoading } = useAuth0();
-  // console.log(user);
+  // console.log(user.picture);
 
   function post() {
     if (isAuthenticated) {

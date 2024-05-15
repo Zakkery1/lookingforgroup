@@ -1,0 +1,18 @@
+.button2{
+    font-size: 12px;
+    font-family: 'Raedex Pro', sans-serif;
+    padding: 0.5em 1em;
+    margin: 0.25em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    background: #dddddd;
+    cursor: pointer;
+
+}
+
+
+.button2:not(.buttton2--selected):hover {
+    background: rgb(134, 156, 255);
+  }
+  
