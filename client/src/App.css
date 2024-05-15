@@ -4,7 +4,6 @@
 
 .Content {
   display: flex;
-
   border: 3px solid red;
   min-height: 80vh;
   width: 100vw;
@@ -19,16 +18,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
+  /*justify-content: center; /* Add justify-content */
   border: 3px solid black;
-  width: 40vw;
+  width: 50vw;
 }
-
-
+.center-content input{
+  height: 80px;
+  padding: 10%;
+}
 .center-card-content {
   border: 3px solid black;
   width: 35vw;
-  height: 20vh;
+  height: 40vh;
 }
 
 .center-card-content img {
@@ -38,14 +39,14 @@
 
 .card-header {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start; /* Change to flex-start */
   align-items: center;
   border: 3px solid black;
   height: 30%;
 }
 
 .card-header img,
-span {
+.card-header span { /* Change to .card-header span */
   padding-left: 2%;
 }
 

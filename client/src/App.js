@@ -5,7 +5,6 @@ import UserProfile from "./components/userProfile";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { useState } from "react";
-import { Resizable } from 'react-resizable';
 
 function App() {
   const [data, setData] = useState("");
@@ -14,7 +13,7 @@ function App() {
   const handleChange = (e) => {
     setData(e.target.value);
     //Axios call to send data to backend
-    //let x = new Date();
+    let x = new Date();
   };
 
   const handleSubmit = (e) => {
@@ -38,10 +37,11 @@ function App() {
 
         <div className="center-content">
           <form onSubmit={handleSubmit}>
-          <Resizable defaultSize={{ width: 300, height: 200 }} minConstraints={[100, 100]} maxConstraints={[500, 500]}
+          <input 
               onChange={(e) => handleChange(e)}
               value={data}
-              placeholder="Create A Post!" />
+              placeholder="Create A Post!" 
+               />
             <button type="submit">Post</button>
           </form>
           {postData.map((d, i) => {
@@ -60,7 +60,9 @@ function App() {
           })}
         </div>
 
-        <div className="right-bar"></div>
+        <div className="right-bar">
+        <a href="https://devpicker.com/random-youtube-video">Home</a>
+        </div>
       </div>
       <Footer />
     </div>

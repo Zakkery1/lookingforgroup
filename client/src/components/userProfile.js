@@ -35,6 +35,7 @@ function UserProfile() {
         <img src={user.picture} alt="pic" />
         <h2>{user.name}</h2>
         <p>{user.email}</p>
+        <p>{user.tag}</p>
       </div>
     )
   );
