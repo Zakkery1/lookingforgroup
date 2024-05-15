@@ -12,6 +12,8 @@ function App() {
 
   const handleChange = (e) => {
     setData(e.target.value);
+    //Axios call to send data to backend
+    let x = new Date();
   };
 
   const handleSubmit = (e) => {
