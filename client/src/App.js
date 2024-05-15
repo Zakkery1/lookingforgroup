@@ -42,7 +42,7 @@ function App() {
               value={data}
               placeholder="Create A Post!"
             />
-            <button type="submit" height="70" width="60">Post</button>
+            <button type="submit">Post</button>
           </form>
           {postData.map((d, i) => {
             return (
