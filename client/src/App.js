@@ -38,6 +38,7 @@ function App() {
         <div className="center-content">
           <form onSubmit={handleSubmit}>
             <input
+              style={{ width: "100%", height: "100px" }}
               onChange={(e) => handleChange(e)}
               value={data}
               placeholder="Create A Post!"
