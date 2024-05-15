@@ -5,6 +5,7 @@ import UserProfile from "./components/userProfile";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { useState } from "react";
+import { Resizable } from 'react-resizable';
 
 function App() {
   const [data, setData] = useState("");
@@ -37,12 +38,14 @@ function App() {
 
         <div className="center-content">
           <form onSubmit={handleSubmit}>
+          <Resizable defaultSize={{ width: 300, height: 200 }} minConstraints={[100, 100]} maxConstraints={[500, 500]} >
             <input
               style={{ width: "100%", height: "100px" }}
               onChange={(e) => handleChange(e)}
               value={data}
               placeholder="Create A Post!"
             />
+            </Resizable>
             <button type="submit">Post</button>
           </form>
           {postData.map((d, i) => {
