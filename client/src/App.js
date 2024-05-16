@@ -10,10 +10,7 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import { useState } from "react";
 import { Resizable } from 'react-resizable';
-
 
 function App() {
   const [data, setData] = useState("");
@@ -69,7 +66,7 @@ function App() {
 
         <div className="center-content">
           <form onSubmit={handleSubmit}>
-          <Resizable defaultSize={{ width: 300, height: 200 }} minConstraints={[100, 100]} maxConstraints={[500, 500]}
+          <input defaultSize={{ width: 300, height: 200 }} minConstraints={[100, 100]} maxConstraints={[500, 500]}
               onChange={(e) => handleChange(e)}
               value={data}
 
