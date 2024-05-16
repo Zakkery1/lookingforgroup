@@ -4,11 +4,16 @@ import LogoutButton from "./components/logoutButton";
 import UserProfile from "./components/userProfile";
 import Header from "./components/header";
 import Footer from "./components/footer";
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import { useState } from "react";
+import { Resizable } from 'react-resizable';
+
 
 function App() {
   const [data, setData] = useState("");
@@ -25,7 +30,7 @@ function App() {
   const handleChange = (e) => {
     setData(e.target.value);
     //Axios call to send data to backend
-    let x = new Date();
+    //let x = new Date();
   };
 
   const handleSubmit = (e) => {
@@ -64,15 +69,20 @@ function App() {
 
         <div className="center-content">
           <form onSubmit={handleSubmit}>
-            <input
+          <Resizable defaultSize={{ width: 300, height: 200 }} minConstraints={[100, 100]} maxConstraints={[500, 500]}
               onChange={(e) => handleChange(e)}
               value={data}
+
               placeholder="Create A Post!"
             />
             {/* <button type="submit">Post</button> */}
             <Button type="submit" variant="primary">
               Post
             </Button>{" "}
+
+              placeholder="Create A Post!" />
+            <button type="submit">Post</button>
+
           </form>
           {user &&
             postData.map((d, i) => {
