@@ -66,20 +66,15 @@ function App() {
 
         <div className="center-content">
           <form onSubmit={handleSubmit}>
-          <input              
-            onChange={(e) => handleChange(e)}
+           <input
+              onChange={(e) => handleChange(e)}
               value={data}
-
               placeholder="Create A Post!"
             />
             {/* <button type="submit">Post</button> */}
             <Button type="submit" variant="primary">
               Post
             </Button>{" "}
-
-              placeholder="Create A Post!" />
-            <button type="submit">Post</button>
-
           </form>
           {user &&
             postData.map((d, i) => {
