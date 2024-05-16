@@ -5,31 +5,37 @@ import UserProfile from "./components/userProfile";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { useState } from "react";
+import { useAuth0 } from '@auth0/auth0-react';
+import PostBox from "./components/postbox";
 import { Resizable } from 'react-resizable';
 
-
-
 function App() {
+  const { user, isAuthenticated, isLoading } = useAuth0();
   const [data, setData] = useState("");
   const [postData, setPostData] = useState([]);
+  const maxDataLength = 280;
 
-  const handleChange = (e) => {
+  const handleDataChange = (e) => {
     setData(e.target.value);
-    //Axios call to send data to backend
+    // Axios call to send data to backend
     // let x = new Date();
-    
   };
 
-  const handleSubmit = (e) => {
+  const handleDataSubmit = (e) => {
     e.preventDefault();
-    setData("");
-    // take the current elements in postData copy with ... and append with data
-    setPostData((prevData) => [...prevData, data]);
+    if (data.trim() && isAuthenticated) {
+      setPostData((prevPostData) => [
+        ...prevPostData, 
+        { text: data, user }
+      ]);
+      setData("");
+    }
   };
 
+  
 
   return (
-    <><div className="App">
+    <div className="App">
       <Header />
       <div className="Content">
         <div className="left-bar">
@@ -40,34 +46,39 @@ function App() {
           <UserProfile />
         </div>
 
-        <div className="center-content">
-          <form onSubmit={handleSubmit}>
-            <input
+        <div className="tweet-box">
+          <form onSubmit={handleDataSubmit}>
+            <textarea
               style={{ width: "100%", height: "100px" }}
-              onChange={(e) => handleChange(e)}
+              onChange={(e) => handleDataChange(e)}
               value={data}
-              placeholder="Create A Post!" />
-          <button type="submit">Post</button>
-        </form>
-        {postData.map((d, i) => {
-          return (
+              placeholder="Ready to Game?"
+              maxLength={maxDataLength}
+            />
+            <div className="tweet-box-footer">
+              <span className="char-count">{maxDataLength - data.length}</span>
+              <button type="submit" disabled={!data.trim()}>Post</button>
+            </div>
+          </form>
+
+          {postData.map((post, i) => (
             <div className="center-card-content" key={i}>
               <div className="card-header">
                 <img
-                  src="https://cdn.pixabay.com/photo/2017/02/07/16/47/kingfisher-2046453_1280.jpg"
-                  alt="pic" />
-                <span> UserName</span>
+                  src={post.user.picture}
+                  alt="profile"
+                />
+                <span>{post.user.name}</span>
               </div>
-              <div className="card-body">{d}</div>
+              <div className="card-body">{post.text}</div>
             </div>
-          );
-        })}
-      </div>
+          ))}
+        </div>
 
-      <div className="right-bar"></div>
-    </div><Footer />
+        <div className="right-bar"></div>
+      </div>
+      <Footer />
     </div>
-    </>
   );
 }
 
