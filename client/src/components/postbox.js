@@ -1,4 +1,4 @@
-// src/TweetBox.js
+// src/postBox.js / moved majority of code over to app.js
 import React, { useState } from 'react';
 import './postBox.css';
 
