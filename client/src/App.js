@@ -66,8 +66,8 @@ function App() {
 
         <div className="center-content">
           <form onSubmit={handleSubmit}>
-          <input defaultSize={{ width: 300, height: 200 }} minConstraints={[100, 100]} maxConstraints={[500, 500]}
-              onChange={(e) => handleChange(e)}
+          <input              
+            onChange={(e) => handleChange(e)}
               value={data}
 
               placeholder="Create A Post!"
