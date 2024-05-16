@@ -74,4 +74,7 @@ span {
 .right-bar {
   /* border: 3px solid black; */
   width: 30vw;
+  padding-top: 5%;
+  color: red;
+
 }

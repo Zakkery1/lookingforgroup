@@ -12,11 +12,10 @@ function Header() {
   return (
     <header>
       <h3>LFG</h3>
+      <img src="../public/LFG.png" alt=""></img>
       <nav ref={navRef}>
-        <a href="/#">Home</a>
-        <a href="/#">New Games</a>
-        <a href="/#">Classics</a>
-        <a href="/#">About Us</a>
+        
+       
         <button className="nav-btn nav-close-btn" onClick={showNavBar}>
           <FaTimes />
         </button>

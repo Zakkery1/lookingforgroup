@@ -4,15 +4,12 @@ import LogoutButton from "./components/logoutButton";
 import UserProfile from "./components/userProfile";
 import Header from "./components/header";
 import Footer from "./components/footer";
-
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import { useState } from "react";
-import { Resizable } from 'react-resizable';
 
 
 function App() {
@@ -69,7 +66,7 @@ function App() {
 
         <div className="center-content">
           <form onSubmit={handleSubmit}>
-          <Resizable defaultSize={{ width: 300, height: 200 }} minConstraints={[100, 100]} maxConstraints={[500, 500]}
+          <input 
               onChange={(e) => handleChange(e)}
               value={data}
 
@@ -79,9 +76,7 @@ function App() {
             <Button type="submit" variant="primary">
               Post
             </Button>{" "}
-
-              placeholder="Create A Post!" />
-            <button type="submit">Post</button>
+            
 
           </form>
           {user &&
@@ -99,7 +94,13 @@ function App() {
             })}
         </div>
 
-        <div className="right-bar"></div>
+        <div className="right-bar">
+          <h1>RULES</h1>
+          <p>1.No foul/offensive language</p>
+          <p>2.Be respectful in game</p>
+          <p>3.No cheating/hacking</p>
+          <p>4.Most important. HAVE FUN AND WIN TOGETHER</p>
+        </div>
       </div>
       <Footer />
     </div>
