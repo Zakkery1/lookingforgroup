@@ -9,8 +9,11 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
+<<<<<<< HEAD
 
-
+=======
+import { Resizable } from 'react-resizable';
+>>>>>>> 37955c08f750e216bedf88cc6fbb977ad2688087
 
 function App() {
   const [data, setData] = useState("");
@@ -66,18 +69,24 @@ function App() {
 
         <div className="center-content">
           <form onSubmit={handleSubmit}>
+<<<<<<< HEAD
           <input 
+=======
+           <input
+>>>>>>> 37955c08f750e216bedf88cc6fbb977ad2688087
               onChange={(e) => handleChange(e)}
               value={data}
-
               placeholder="Create A Post!"
             />
             {/* <button type="submit">Post</button> */}
             <Button type="submit" variant="primary">
               Post
             </Button>{" "}
+<<<<<<< HEAD
             
 
+=======
+>>>>>>> 37955c08f750e216bedf88cc6fbb977ad2688087
           </form>
           {user &&
             postData.map((d, i) => {
