@@ -87,3 +87,12 @@
 
       }
 } 
+.header{
+  display: flex;
+  justify-content: center;
+}
+
+.header-image {
+  width: 80px;
+  height: 75px;
+}

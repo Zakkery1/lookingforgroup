@@ -2,7 +2,11 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 function UserProfile() {
   const { user, isAuthenticated, isLoading } = useAuth0();
+<<<<<<< Updated upstream
 
+=======
+  console.log(user)
+>>>>>>> Stashed changes
   if (isLoading) {
     return <div>Loading!</div>;
   }
