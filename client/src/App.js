@@ -11,8 +11,6 @@ import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import { Resizable } from 'react-resizable';
 
-
-
 function App() {
   const [data, setData] = useState("");
   const [postData, setPostData] = useState([]);
@@ -28,9 +26,8 @@ function App() {
       axios.get("http://localhost:3002/users").then((res) => {
         setPostData(res.data.data);
       });
-    }
+    };
     setInterval(get, 4000);
-
   }, []);
 
   const handleChange = (e) => {
@@ -64,7 +61,6 @@ function App() {
       <Header />
       <div className="Content">
         <div className="left-bar">
-          <h1>Information</h1>
           {/* if isAuthenticated is truthy return logout else return login */}
           {isAuthenticated ? <LogoutButton /> : <LoginButton />}
           <p>User Information!</p>
@@ -83,9 +79,10 @@ function App() {
               Post
             </Button>{" "}
           </form>
-          {user &&
-            postData.map((d, i) => {
-              return (
+          <div className="center-card-content-container">
+            {user &&
+              postData.map((d, i) => {
+                return (
                   <div className="center-card-content" key={i}>
                     <div className="card-header">
                       <img src={d.picture} alt="pic" />
@@ -94,18 +91,18 @@ function App() {
                     {/* if d.body returns falsy or null/empty string use data */}
                     <div className="card-body">{d.body ? d.body : data}</div>
                   </div>
-              );
-            })}
+                );
+              })}
+          </div>
         </div>
 
         <div className="right-bar">
+          <h1>Instructions</h1>
+          <p>Log in!</p>
+          <p>Specify the game your playing!</p>
+          <p>Make sure you to put your username that you use in game!</p>
 
-        <h1>Instructions</h1>
-        <p>Log in!</p>
-        <p>Specify the game your playing!</p>
-        <p>Make sure you to put your username that you use in game!</p>
-
-        <h1>RULES</h1>
+          <h1>RULES</h1>
           <p>1.No foul/offensive language</p>
           <p>2.Be respectful in game</p>
           <p>3.No cheating/hacking</p>

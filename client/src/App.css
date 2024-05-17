@@ -26,12 +26,21 @@
   /* justify-content: center; */
   /* border: 3px solid black; */
   width: 40vw;
+  height: 80vh;
 }
 
 .center-content input {
   min-height: 60px;
   width: 200px;
   border-radius: 5%;
+}
+
+.center-card-content-container {
+  /* border: 3px solid black; */
+  width: 37vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* text-align: justify; */
 }
 
 .center-card-content {
