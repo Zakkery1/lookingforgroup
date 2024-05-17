@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-<<<<<<< Updated upstream
 import "./footer.css";
-=======
-import '../components/footer.css'
->>>>>>> Stashed changes
 
 // Styled component for the colored box
 const ColoredBox = styled.div`
@@ -52,7 +48,6 @@ const Footer = () => {
 
   return (
     <ColoredBox className="footer-main">
-      <Logo src="./client/src/images/image.png" alt="Company Logo" />
       <footer id="footer">
         {team.map((member, index) => (
           <div className="links" key={index}>
