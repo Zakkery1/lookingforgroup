@@ -18,6 +18,10 @@
   color: white;
 }
 
+.Auth img{
+  border-radius: 50px;
+}
+
 .center-content {
   padding-top: 2%;
   display: flex;

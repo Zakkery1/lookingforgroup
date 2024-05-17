@@ -8,7 +8,7 @@ function UserProfile() {
 
   return (
     isAuthenticated && (
-      <div>
+      <div className="Auth">
         <img src={user.picture} alt="pic" />
         <h2>{user.name}</h2>
         <p>{user.email}</p>

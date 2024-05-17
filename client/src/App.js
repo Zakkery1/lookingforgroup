@@ -9,7 +9,7 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import { Resizable } from 'react-resizable';
+
 
 function App() {
   const [data, setData] = useState("");
@@ -18,12 +18,12 @@ function App() {
   const { user, isAuthenticated } = useAuth0();
 
   useEffect(() => {
-    axios.get("http://localhost:3002/users").then((res) => {
+    axios.get("https://lookingforgroup.onrender.com/users").then((res) => {
       setPostData(res.data.data);
     });
 
     let get = () => {
-      axios.get("http://localhost:3002/users").then((res) => {
+      axios.get("https://lookingforgroup.onrender.com/users").then((res) => {
         setPostData(res.data.data);
       });
     };
@@ -46,7 +46,7 @@ function App() {
       };
       // take the current elements in postData copy with ... and append with data
       setPostData((prevData) => [userData, ...prevData]);
-      axios.post("http://localhost:3002/users/upload", userData).then((res) => {
+      axios.post("https://lookingforgroup.onrender.com/users/upload", userData).then((res) => {
         console.log(res.data, "postdata");
       });
       console.log(postData);
