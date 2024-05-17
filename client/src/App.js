@@ -9,7 +9,7 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Resizable } from 'react-resizable';
+// import { Resizable } from 'react-resizable';
 
 
 
@@ -35,10 +35,6 @@ function App() {
 
   const handleChange = (e) => {
     setData(e.target.value);
-
-    //Axios call to send data to backend
-    //let x = new Date();
-
   };
 
   const handleSubmit = (e) => {
@@ -77,7 +73,7 @@ function App() {
 
         <div className="center-content">
           <form onSubmit={handleSubmit}>
-           <input
+            <input
               onChange={(e) => handleChange(e)}
               value={data}
               placeholder="Create A Post!"
@@ -86,21 +82,10 @@ function App() {
             <Button type="submit" variant="primary">
               Post
             </Button>{" "}
-              placeholder="Create A Post!" />
-            <button type="submit">Post</button>
           </form>
           {user &&
             postData.map((d, i) => {
               return (
-                <div className="center-card-content" key={i}>
-                  <div className="card-header">
-                    <img src={d.picture} alt="pic" />
-                    <span>{d.name ? d.name : user.name}</span>
-                  </div>
-                  {/* if d.body returns falsy or null/empty string use data */}
-                  <div className="card-body">{d.body ? d.body : data}</div>
-                </div>
-
                   <div className="center-card-content" key={i}>
                     <div className="card-header">
                       <img src={d.picture} alt="pic" />
@@ -109,7 +94,6 @@ function App() {
                     {/* if d.body returns falsy or null/empty string use data */}
                     <div className="card-body">{d.body ? d.body : data}</div>
                   </div>
-
               );
             })}
         </div>
@@ -121,9 +105,7 @@ function App() {
         <p>Specify the game your playing!</p>
         <p>Make sure you to put your username that you use in game!</p>
 
-
-
-          <h1>RULES</h1>
+        <h1>RULES</h1>
           <p>1.No foul/offensive language</p>
           <p>2.Be respectful in game</p>
           <p>3.No cheating/hacking</p>

@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-<<<<<<< Updated upstream
 import "./footer.css";
-=======
-import '../components/footer.css'
->>>>>>> Stashed changes
 
 // Styled component for the colored box
 const ColoredBox = styled.div`

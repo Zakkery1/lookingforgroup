@@ -1,16 +1,9 @@
 // const userModel = require("./userSchema");
 const postSchema = require("./postSchema");
-<<<<<<< Updated upstream
 
-
-// const server =
-//   "mongodb+srv://ZakkC:Sempron1234!@cluster0.9lhixpz.mongodb.net/LFG";
-=======
->>>>>>> Stashed changes
-
-// const server =
-//   "mongodb+srv://ZakkC:Sempron1234!@cluster0.9lhixpz.mongodb.net/LFG";
-const server = 'mongodb+srv://egguwu:CodeKirby24@cluster0.zwunwic.mongodb.net/LFG'
+const server =
+  "mongodb+srv://ZakkC:Sempron1234!@cluster0.9lhixpz.mongodb.net/LFG";
+// const server = 'mongodb+srv://egguwu:CodeKirby24@cluster0.zwunwic.mongodb.net/LFG'
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
