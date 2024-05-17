@@ -10,18 +10,22 @@ function Header() {
   };
 
   return (
+
+    <header className="header">
+      <img className="header-image" src="./lfg.png" alt="picture"/>
+      {/* <nav ref={navRef}> */}
+
     <header>
       <h3>LFG</h3>
       <img src="../public/LFG.png" alt=""></img>
       <nav ref={navRef}>
         
-       
         <button className="nav-btn nav-close-btn" onClick={showNavBar}>
-          <FaTimes />
+          {/* <FaTimes />
         </button>
       </nav>
       <button className="nav-btn nav-close-btn" onClick={showNavBar}>
-        <FaBars />
+        <FaBars /> */}
       </button>
     </header>
   );

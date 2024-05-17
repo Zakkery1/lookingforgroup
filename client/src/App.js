@@ -9,11 +9,9 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
-<<<<<<< HEAD
-
-=======
 import { Resizable } from 'react-resizable';
->>>>>>> 37955c08f750e216bedf88cc6fbb977ad2688087
+
+
 
 function App() {
   const [data, setData] = useState("");
@@ -25,12 +23,22 @@ function App() {
     axios.get("http://localhost:3002/users").then((res) => {
       setPostData(res.data.data);
     });
+
+    let get = () => {
+      axios.get("http://localhost:3002/users").then((res) => {
+        setPostData(res.data.data);
+      });
+    }
+    setInterval(get, 4000);
+
   }, []);
 
   const handleChange = (e) => {
     setData(e.target.value);
+
     //Axios call to send data to backend
     //let x = new Date();
+
   };
 
   const handleSubmit = (e) => {
@@ -69,11 +77,7 @@ function App() {
 
         <div className="center-content">
           <form onSubmit={handleSubmit}>
-<<<<<<< HEAD
-          <input 
-=======
            <input
->>>>>>> 37955c08f750e216bedf88cc6fbb977ad2688087
               onChange={(e) => handleChange(e)}
               value={data}
               placeholder="Create A Post!"
@@ -82,11 +86,8 @@ function App() {
             <Button type="submit" variant="primary">
               Post
             </Button>{" "}
-<<<<<<< HEAD
-            
-
-=======
->>>>>>> 37955c08f750e216bedf88cc6fbb977ad2688087
+              placeholder="Create A Post!" />
+            <button type="submit">Post</button>
           </form>
           {user &&
             postData.map((d, i) => {
@@ -99,11 +100,29 @@ function App() {
                   {/* if d.body returns falsy or null/empty string use data */}
                   <div className="card-body">{d.body ? d.body : data}</div>
                 </div>
+
+                  <div className="center-card-content" key={i}>
+                    <div className="card-header">
+                      <img src={d.picture} alt="pic" />
+                      <span>{d.name ? d.name : user.name}</span>
+                    </div>
+                    {/* if d.body returns falsy or null/empty string use data */}
+                    <div className="card-body">{d.body ? d.body : data}</div>
+                  </div>
+
               );
             })}
         </div>
 
         <div className="right-bar">
+
+        <h1>Instructions</h1>
+        <p>Log in!</p>
+        <p>Specify the game your playing!</p>
+        <p>Make sure you to put your username that you use in game!</p>
+
+
+
           <h1>RULES</h1>
           <p>1.No foul/offensive language</p>
           <p>2.Be respectful in game</p>
