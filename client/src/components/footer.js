@@ -52,7 +52,6 @@ const Footer = () => {
 
   return (
     <ColoredBox className="footer-main">
-      <Logo src="./client/src/images/image.png" alt="Company Logo" />
       <footer id="footer">
         {team.map((member, index) => (
           <div className="links" key={index}>
