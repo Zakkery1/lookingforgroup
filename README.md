@@ -25,7 +25,7 @@ Bootstrap\
 date-fns
 
 ### Project Team
-Brien Simmons, Frontend Dev https://www.linkedin.com/in/briensimmons/
-Jervontae Shotwell, Frontend Dev https://www.linkedin.com/in/jshotwell7/
-Makenzie Jones, Backend Dev https://www.linkedin.com/in/makenziejones90/
+Brien Simmons, Frontend Dev https://www.linkedin.com/in/briensimmons/ \
+Jervontae Shotwell, Frontend Dev https://www.linkedin.com/in/jshotwell7/ \
+Makenzie Jones, Backend Dev https://www.linkedin.com/in/makenziejones90/ \
 Dominique Buckner, Backend Dev https://www.linkedin.com/in/dombucknerui/
