@@ -1,4 +1,6 @@
+### Looking For Group
 
+Welcome to the "Looking For Group" project! This is a web application where users can create posts specifying the game they are playing and connect with others who are interested in playing together.
 ### 'CD into the correct directory!' 
 
 ### 'npm install'
