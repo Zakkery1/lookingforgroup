@@ -10,7 +10,7 @@ Looking For Group is a web application built using React and Node.js, where user
 
 User authentication with Auth0
 Create and post about the game you're playing
-Real-time updates of posts every 4 seconds
+Real-time updates of posts
 Simple and responsive user interface
 
 ### Technologies Used
