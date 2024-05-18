@@ -65,7 +65,7 @@
 .center-card-content-container {
   /* border: 3px solid black; */
   width: 36vw;
-  height: 76vh;
+  height: 73vh;
   overflow-x: hidden;
   overflow-y: auto;
   /* text-align: justify; */
@@ -165,10 +165,14 @@ span {
 
 }
 
-.footer{
+.footer {
   height: 80px;
 }
 
 .right-Container input {
   height: 40px;
+}
+
+.form-Container {
+  padding-top: 2%;
 }

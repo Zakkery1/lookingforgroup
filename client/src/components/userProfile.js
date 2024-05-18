@@ -6,6 +6,7 @@ function UserProfile() {
     return <div>Loading!</div>;
   }
 
+  // getting the user data from Auth0 after login, this only works if isAuthenticated is true
   return (
     isAuthenticated && (
       <div className="Auth">
