@@ -1,98 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    .titillium-web-light {
-        font-family: "Titillium Web", sans-serif;
-        font-weight: 300;
-        font-style: normal;
-      }
-      
-      .titillium-web-regular {
-        font-family: "Titillium Web", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-      
-      .titillium-web-bold {
-        font-family: "Titillium Web", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-      }
-      
-      :root{
-        --mainColor: #29335C;
-        --mainColorLight: #5767aa;
-        --secondaryColor: #DB2B39;
-        --textColor: #eee; 
-      }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 
-      header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 80px;
-        padding: 0 2rem;
-        background-color:#29335C;
-        color:#eee;
-      }
+  .titillium-web-light {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
 
-      nav a{
-        margin: 0 2rem;
-        color: #eee;
-        text-decoration: none;
-      }
+  .titillium-web-regular {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-      nav a:hover{
-        color: #DB2B39;
-      }
+  .titillium-web-bold {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
 
-      header .nav-btn {
-        padding: 5px;
-        cursor: pointer;
-        background: transparent;
-        border: none;
-        outline: none;
-        color: #eee;
-        visibility: hidden;
-        opacity: 0;
-      }
+  :root {
+    --mainColor: #29335C;
+    --mainColorLight: #5767aa;
+    --secondaryColor: #DB2B39;
+    --textColor: #eee;
+  }
 
-      @media only screen and (max-width: 1024px){
-        header .nav-btn {
-            visibility: visible;
-            opacity: 1;
-        }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 0 2rem;
+    background-color: #29335C;
+    color: #eee;
+  }
 
-        header nav{
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
-            background-color: #404145;
-            transition: 1s;
-            transform: translateY(-100vh);
-        }
-      }
+  nav a {
+    margin: 0 2rem;
+    color: #eee;
+    text-decoration: none;
+  }
 
-      header .responsive_nav{
-        transform: none;
+  nav a:hover {
+    color: #DB2B39;
+  }
 
-      }
-} 
-.header{
-  display: flex;
-  justify-content: center;
+  header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #eee;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    header .nav-btn {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    header nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: #404145;
+      transition: 1s;
+      transform: translateY(-100vh);
+    }
+  }
+
+  header .responsive_nav {
+    transform: none;
+
+  }
 }
 
 .header-image {
   width: 80px;
   height: 75px;
+}
+
+.login-header {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }

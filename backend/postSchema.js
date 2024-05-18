@@ -9,6 +9,7 @@ var postSchema = mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  timestamp: String,
 });
 
 const postModel = mongoose.model("userPost", postSchema);

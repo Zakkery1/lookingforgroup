@@ -2,13 +2,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const postSchema = require("./postSchema");
-require('dotenv').config()
+require("dotenv").config();
 // const server =
 //   "mongodb+srv://ZakkC:Sempron1234!@cluster0.9lhixpz.mongodb.net/LFG";
 // const server = 'mongodb+srv://egguwu:CodeKirby24@cluster0.zwunwic.mongodb.net/LFG'
 
 let server = process.env.SERVER;
-console.log(server)
+console.log(server);
 const app = express();
 // mongoose.connect(server);
 app.use(cors());
