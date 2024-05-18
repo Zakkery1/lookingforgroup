@@ -29,3 +29,9 @@ Brien Simmons, Frontend Dev https://www.linkedin.com/in/briensimmons/ \
 Jervontae Shotwell, Frontend Dev https://www.linkedin.com/in/jshotwell7/ \
 Makenzie Jones, Backend Dev https://www.linkedin.com/in/makenziejones90/ \
 Dominique Buckner, Backend Dev https://www.linkedin.com/in/dombucknerui/
+
+![Project Diagram](https://github.com/Zakkery1/lookingforgroup/assets/86127936/7ace474f-e25b-4e69-bff6-36c0d785a3af)
+![Frontend  Design](https://github.com/Zakkery1/lookingforgroup/assets/86127936/e70d0954-b31d-49c6-8c69-1afe8b85b463)
+
+![image](https://github.com/Zakkery1/lookingforgroup/assets/86127936/116defcb-1ed5-4bd9-8b87-a3eb304a50a4)
+![image](https://github.com/Zakkery1/lookingforgroup/assets/86127936/1b0bc006-ae07-4f20-bba6-b4f03e8f6ef0)
